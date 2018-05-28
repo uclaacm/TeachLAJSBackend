@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const multer = require('multer'); // v1.0.5
+const {createUser} = require ('./lib')
 
 const upload = multer(); // for parsing multipart/form-data
 
@@ -10,22 +11,18 @@ app.use(cors());
 app.use(bodyParser.json())
 
 
-app.post("/init", upload.array(), async function (req, res) {
-  console.log("==================================Init start====================================")
-  console.log("Init received")
+app.post("/createUser", upload.array(), async function (req, res) {
+  console.log("==================================Create start====================================")
+  console.time("createUser")
   if(!req.body){
     console.log("no body")
-    return res.status(200).send({ ok: false, error: "No body found" });
+    return res.status(200).send({ ok: false, data: "No body found" });
   }
-//   let { error, output } = await init(DIR, req.body.name);
-  let {error, output} = {error:false, output: "TEST"}
+  let result = await createUser(req.body)
 
-  console.log("==================================Init end======================================\n")
-  if (!error) {
-    return res.status(200).send({ok: true, name: req.body.name})
-  } else {
-    return res.status(200).send({ ok: false, error: output });
-  }
+  console.timeEnd("createUser")
+  console.log("==================================Create end======================================\n")
+    return res.status(200).send(result)
 
 })
 

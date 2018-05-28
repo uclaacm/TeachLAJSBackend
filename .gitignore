@@ -1,4 +1,3 @@
 node_modules
-dist
+teachla-sdk.json
 *.log
-client_secrets.json
