@@ -1,5 +1,4 @@
 # TeachLAJSBackend
-======
 ## What
 Express server backend for Teach LA Coding platform
 
