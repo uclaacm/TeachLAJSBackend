@@ -1,0 +1,4 @@
+node_modules
+dist
+*.log
+client_secrets.json
