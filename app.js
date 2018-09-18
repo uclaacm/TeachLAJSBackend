@@ -26,14 +26,14 @@ app.get("/initializeUserData/:uid", upload.array(), async function (req, res) {
     })
 })
 
-app.get("/getUser", upload.array(), async function (req, res) {
+app.post("/getUserData/:uid", upload.array(), async function (req, res) {
   console.log("==================================Get start====================================")
   console.time("getUser")
   if(!req.body){
     console.log("no body")
     return res.status(200).send({ ok: false, data: "No body found" });
   }
-  let result = await lib.getUser()
+  let result = await lib.getUserData(req.params.uid, req.body)
 
   console.timeEnd("getUser")
   console.log("==================================Get end======================================\n")
