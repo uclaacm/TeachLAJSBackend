@@ -10,8 +10,10 @@ firebase.initializeApp(config);
 
 let db = firebase.firestore()
 
-db.settings = ({
+const settings = {
   timestampsInSnapshots: true
-})
+}
+
+db.settings(settings)
 
 module.exports = db

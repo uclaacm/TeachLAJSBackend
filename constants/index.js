@@ -15,7 +15,7 @@ const HTML = "html"
 const DEFAULT_USER_DATA = {
   displayName:"",
   photoURL:"",
-  mostRecentLanguage:PYTHON,
+  mostRecentProgram:PYTHON,
 }
 
 const LANGUAGES_ARR = [PYTHON, PROCESSING, JAVASCRIPT, CPP, HTML, JAVA]
