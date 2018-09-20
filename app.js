@@ -11,9 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post("/createUser", upload.array(), async function(req, res) {
-  console.log(
-    "==================================Create start===================================="
-  );
+  console.log("==================================Create start====================================");
   console.time("createUser");
   if (!req.body) {
     console.log("no body");
@@ -23,7 +21,7 @@ app.post("/createUser", upload.array(), async function(req, res) {
 
   console.timeEnd("createUser");
   console.log(
-    "==================================Create end======================================\n"
+    "==================================Create end======================================\n",
   );
   return res.status(200).send(result);
 });
