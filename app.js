@@ -40,33 +40,34 @@ app.get("/getUserData/:uid", async function (req, res) {
 
 app.post("/updateUserData/:uid", upload.array(), async function (req, res) {
   console.log(`==========================/updateUserData/${req.params.uid} start====================================`)
-  console.time("inituserdata")
+  console.time("updateuserdata")
   if(!req.params.uid){
     return res.status(200).send({ ok: false, error: "No UID provided" });
   }
   let result = await lib.updateUserData(req.params.uid)
 
-  console.timeEnd("inituserdata")
+  console.timeEnd("updateuserdata")
   console.log(`==========================/updateUserData/${req.params.uid} end====================================`)
   return res.status(200).send({
     ...result
   })
 })
 
-app.get("/user/:uid", upload.array(), async function (req, res) {
-  console.log(`==================================/users/${req.params.uid} start====================================`)
-  console.time("usersget")
-  if(!req.params.uid){
-    return res.status(200).send({ ok: false, data: "No UID provided" });
+app.put("/updatePrograms/:uid", upload.array(), async function (req, res) {
+  console.log(`==========================/updatePrograms/${req.params.uid} start====================================`)
+  console.time("updateprograms")
+  if(!req.body){
+    return res.status(200).send({ ok: false, error: "No body provided" });
   }
-  let result = await lib.getUserData(req.params.uid, req.query)
 
-  console.timeEnd("usersget")
-  console.log(`==================================/users/${req.params.uid} end====================================\n`)
-  
-  return res.status(200).send(result)
+  let result = await lib.updatePrograms(req.params.uid, req.body)
+
+  console.timeEnd("updateprograms")
+  console.log(`==========================/updatePrograms/${req.params.uid} end====================================`)
+  return res.status(200).send({
+    ...result
+  })
 })
-
   
 // Start the server
 const PORT = process.env.PORT || 8081;

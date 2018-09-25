@@ -1,15 +1,24 @@
-# TeachLAJSBackend
-1. Clone repo
-2. cd into repo
-3. npm/yarn install
-3. npm/yarn start
-4. Server now running on local port :8081
+## This is the frontend code for the <Teach LA> Helper site
 
-## What
-Express server backend for Teach LA Coding platform
+# Dependencies
 
-## Why
-Get the project rolling. Used for authentication using username and password in the short term.
+1. yarn and npm
+2. git
 
-## How
-NodeJS, Express, and Google Firestore
+# To Get Started
+
+1. git clone https://github.com/connorbo97/TeachLAJSBackend.git
+2. git clone https://github.com/connorbo97/teachla-frontend.git
+3. cd TeachLAJSBackend
+4. yarn (or npm) install
+5. yarn (or npm) start
+6. cd ../teachla-frontend
+7. yarn (or npm) install
+8. yarn (or npm) start
+9. The Client should be viewable on localhost:8080
+
+# Pre-commit hook
+
+
+
+Using lint-staged and husky to prettify committed files on push
