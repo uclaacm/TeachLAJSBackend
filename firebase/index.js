@@ -1,10 +1,17 @@
-var admin = require("firebase-admin");
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
 
-var serviceAccount = require("../teachla-sdk.json");
+var config = require('../firebase-config.json');
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://teachlacodingplatform.firebaseio.com",
-});
+firebase.initializeApp(config);
 
-module.exports = admin.auth();
+let db = firebase.firestore()
+
+const settings = {
+  timestampsInSnapshots: true
+}
+
+db.settings(settings)
+
+module.exports = db
