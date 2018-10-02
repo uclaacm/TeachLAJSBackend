@@ -8,7 +8,7 @@ const upload = multer(); // for parsing multipart/form-data
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 
 app.get("/initializeUserData/:uid", upload.array(), async function (req, res) {
@@ -36,7 +36,12 @@ app.get("/getUserData/:uid", async function (req, res) {
   console.log("==================================Get end======================================\n")
     return res.status(200).send(result)
 
-})
+  console.timeEnd("createUser");
+  console.log(
+    "==================================Create end======================================\n",
+  );
+  return res.status(200).send(result);
+});
 
 app.post("/updateUserData/:uid", upload.array(), async function (req, res) {
   console.log(`==========================/updateUserData/${req.params.uid} start====================================`)
@@ -73,7 +78,5 @@ app.put("/updatePrograms/:uid", upload.array(), async function (req, res) {
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
-  console.log('Press Ctrl+C to quit.');
+  console.log("Press Ctrl+C to quit.");
 });
-
-
