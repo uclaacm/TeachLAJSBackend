@@ -2,16 +2,16 @@ const firebase = require("firebase");
 // Required for side-effects
 require("firebase/firestore");
 
-var config = require('../firebase-config.json');
+var config = require("../firebase-config.json");
 
 firebase.initializeApp(config);
 
-let db = firebase.firestore()
+let db = firebase.firestore();
 
 const settings = {
-  timestampsInSnapshots: true
-}
+  timestampsInSnapshots: true,
+};
 
-db.settings(settings)
+db.settings(settings);
 
-module.exports = db
+module.exports = db;
