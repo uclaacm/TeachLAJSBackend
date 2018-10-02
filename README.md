@@ -1,4 +1,4 @@
-## This is the frontend code for the <Teach LA> Helper site
+## This is the backend code for the <Teach LA> Helper site
 
 # Dependencies
 
@@ -18,7 +18,5 @@
 9. The Client should be viewable on localhost:8080
 
 # Pre-commit hook
-
-
 
 Using lint-staged and husky to prettify committed files on push

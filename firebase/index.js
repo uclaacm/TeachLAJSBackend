@@ -4,16 +4,16 @@ const firebase = require("firebase");
 require("firebase/firestore");
 
 // var serviceAccount = require('../teachla-sdk.json');
-var config = require('../firebase-config.json');
+var config = require("../firebase-config.json");
 
 firebase.initializeApp(config);
 
-let db = firebase.firestore()
+let db = firebase.firestore();
 
 const settings = {
   timestampsInSnapshots: true
-}
+};
 
-db.settings(settings)
+db.settings(settings);
 
-module.exports = db
+module.exports = db;
