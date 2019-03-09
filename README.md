@@ -1,22 +1,33 @@
-## This is the backend code for the <Teach LA> Helper site
+## ACM Teach LA Backend
 
-# Dependencies
+This is the backend code for the ACM Teach LA helper site, which functions as an online IDE and code-saver. It's built by the UCLA ACM Teach LA dev team with [Express](https://expressjs.com/) and [Firebase](https://firebase.google.com/).
 
-1. yarn and npm
-2. git
+## Developer Setup
 
-# To Get Started
+You'll need:
 
-1. git clone https://github.com/connorbo97/TeachLAJSBackend.git
-2. git clone https://github.com/connorbo97/teachla-frontend.git
-3. cd TeachLAJSBackend
-4. yarn (or npm) install
-5. yarn (or npm) start
-6. cd ../teachla-frontend
-7. yarn (or npm) install
-8. yarn (or npm) start
-9. The Client should be viewable on localhost:8080
+- [Node](https://nodejs.org/en/) (we develop this with Node v10)
+- [git](https://git-scm.com/)
+- either npm (which comes default with Node) or [yarn](https://yarnpkg.com/en/)
 
-# Pre-commit hook
+This project won't make much sense without our Frontend - you can find more information on that [here](https://github.com/uclaacm/TeachLAFrontend).
 
-Using lint-staged and husky to prettify committed files on push
+Once you have those dependencies, set up is very simple. Type the following lines into your command line:
+
+```bash
+$ git clone https://github.com/uclaacm/TeachLAFrontend.git
+$ git clone https://github.com/uclaacm/TeachLAJSBackend.git
+$ cd TeachLAJSBackend
+$ npm install
+$ npm start
+# in a separate terminal window
+$ cd ../teachla-frontend
+$ npm install
+$ npm start
+```
+
+The front-end client should now be automatically opened in your browser; however, you can also manually visit it on `localhost:8080`. The backend is open on `localhost:8081`.
+
+## Developer Notes
+
+- We use lint-staged and husky to prettify commited files on push
