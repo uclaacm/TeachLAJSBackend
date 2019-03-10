@@ -1,4 +1,3 @@
 node_modules
 # firebase-config.json
 *.log
-yarn.lock
