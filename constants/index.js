@@ -1,3 +1,5 @@
+const winston = require("winston");
+
 const PYTHON = "python";
 const JAVASCRIPT = "javascript";
 const JAVA = "java";
@@ -21,8 +23,9 @@ const languageToDisplayName = lang => {
     case HTML:
       return "HTML";
     default:
-      console.log(
-        "languageToDisplayName exception: lang received that's not accounted for: " + lang,
+      winston.error(
+        "languageToDisplayName exception: program language received that's not accounted for: " +
+          lang,
       );
       return "ERROR";
   }
@@ -59,8 +62,9 @@ const languageToDefaultCode = lang => {
     case HTML:
       return "<html>\n  <head>\n  </head>\n  <body>\n    <div style='width: 100px; height: 100px; background-color: black'>\n    </div>\n  </body>\n</html>";
     default:
-      console.log(
-        "languageToDefaultCode exception: lang received that's not accounted for: " + lang,
+      winston.error(
+        "languageToDefaultCode exception: program language received that's not accounted for: " +
+          lang,
       );
       return "";
   }
