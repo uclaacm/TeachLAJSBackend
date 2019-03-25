@@ -1,3 +1,5 @@
+const winston = require("winston");
+
 const PYTHON = "python";
 const JAVASCRIPT = "javascript";
 const JAVA = "java";
@@ -21,9 +23,9 @@ const languageToDisplayName = lang => {
     case HTML:
       return "HTML";
     default:
-      console.log(
-        "languageToDisplayName exception: lang received that's not accounted for: " +
-          lang
+      winston.error(
+        "languageToDisplayName exception: program language received that's not accounted for: " +
+          lang,
       );
       return "ERROR";
   }
@@ -44,7 +46,7 @@ const DEFAULT_PHOTO_URL = `https://www.google.com/search?q=teach+la+ucla&rlz=1C5
 const DEFAULT_USER_DATA = {
   displayName: DEFAULT_DISPLAY_NAME,
   photoURL: DEFAULT_PHOTO_URL,
-  mostRecentProgram: DEFAULT_PROGRAM
+  mostRecentProgram: DEFAULT_PROGRAM,
 };
 
 //converts default languages to the default code provided with them
@@ -63,9 +65,9 @@ const languageToDefaultCode = lang => {
     case HTML:
       return "<html>\n  <head>\n  </head>\n  <body>\n    <div style='width: 100px; height: 100px; background-color: black'>\n    </div>\n  </body>\n</html>";
     default:
-      console.log(
-        "languageToDefaultCode exception: lang received that's not accounted for: " +
-          lang
+      winston.error(
+        "languageToDefaultCode exception: program language received that's not accounted for: " +
+          lang,
       );
       return "";
   }
@@ -77,7 +79,7 @@ const createDefaultProgramDoc = lang => {
 
   return {
     code: programCode,
-    language: lang
+    language: lang,
   };
 };
 
@@ -116,5 +118,5 @@ module.exports = {
   //helpers
   //TODO: move these to a helper.js file
   languageToDisplayName,
-  createDefaultProgramDoc
+  createDefaultProgramDoc,
 };
