@@ -36,13 +36,9 @@ const DEFAULT_PROGRAM = languageToDisplayName(SUPPORTED_LANGUAGES[0]);
 
 const DEFAULT_DISPLAY_NAME = "Joe Bruin";
 
-//ucla logo
-const DEFAULT_PHOTO_URL = `https://www.google.com/search?q=teach+la+ucla&rlz=1C5CHFA_enUS801US801&tbm=isch&source=lnt&tbs=isz:i&sa=X&ved=0ahUKEwim28DRqM3dAhWyGDQIHcM1ALUQpwUIHg&biw=1920&bih=1103&dpr=1#imgrc=tK7LcaauW9qDqM:`;
-
 //default structure of user data (the data underneath the user document in firestore)
 const DEFAULT_USER_DATA = {
   displayName: DEFAULT_DISPLAY_NAME,
-  photoURL: DEFAULT_PHOTO_URL,
   mostRecentProgram: DEFAULT_PROGRAM,
   photoName: "",
 };
