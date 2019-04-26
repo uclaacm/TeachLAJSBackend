@@ -70,13 +70,13 @@ const languageToDefaultCode = lang => {
   }
 };
 
-const createDefaultProgramDoc = lang => {
-  const programName = languageToDisplayName(lang);
+const createDefaultProgramDoc = (lang, index) => {
   const programCode = languageToDefaultCode(lang);
 
   return {
     code: programCode,
     language: lang,
+    thumbnail: index || 0,
   };
 };
 
@@ -92,11 +92,13 @@ let DEFAULT_USER_PROGRAMS = {};
     language: "the programming language the code is in"
   }
 */
-SUPPORTED_LANGUAGES.forEach(lang => {
+SUPPORTED_LANGUAGES.forEach((lang, index) => {
   const programName = languageToDisplayName(lang);
 
-  DEFAULT_USER_PROGRAMS[programName] = createDefaultProgramDoc(lang);
+  DEFAULT_USER_PROGRAMS[programName] = createDefaultProgramDoc(lang, index);
 });
+
+const NUM_PROGRAM_THUMBNAIL_OPTIONS = 58;
 
 module.exports = {
   //language constants
@@ -116,4 +118,8 @@ module.exports = {
   //TODO: move these to a helper.js file
   languageToDisplayName,
   createDefaultProgramDoc,
+  languageToDefaultCode,
+
+  //fronted-dependencies
+  NUM_PROGRAM_THUMBNAIL_OPTIONS,
 };
