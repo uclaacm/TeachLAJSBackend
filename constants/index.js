@@ -42,7 +42,9 @@ const DEFAULT_DISPLAY_NAME = "Joe Bruin";
 //default structure of user data (the data underneath the user document in firestore)
 const DEFAULT_USER_DATA = {
   displayName: DEFAULT_DISPLAY_NAME,
-  mostRecentProgram: DEFAULT_PROGRAM,
+  //DAY OF CODE HACK
+  // mostRecentProgram: DEFAULT_PROGRAM,
+  mostRecentProgram: "Day Of Code",
   photoName: "",
 };
 
@@ -68,6 +70,44 @@ const languageToDefaultCode = lang => {
       );
       return "";
   }
+};
+
+const dayOfCodePrograms = {
+  "Day Of Code": {
+    language: PYTHON,
+    code: `age = input("How old are you (or how old will you be turning this year)?")\nbirth_date = 2019 - int(age)\nyear = int(birth_date) + 100\n`,
+    thumbnail: 0,
+  },
+  "Ex 3": {
+    language: PYTHON,
+    code: `import turtle\nt = turtle.Turtle()\n\nt.color('blue')\nt.forward(100)\nt.left(90)\nt.forward(100)\nt.left(90)\nt.forward(100)\nt.left(90)\nt.forward(100)\nt.left(90)`,
+    thumbnail: 1,
+  },
+  "Ex 5": {
+    language: PYTHON,
+    code: `import turtle\nt = turtle.Turtle()\n\nt.forward(100)\nt.left(45)\nt.forward(100)`,
+    thumbnail: 2,
+  },
+  "Ex 6": {
+    language: PYTHON,
+    code: `import turtle\nt = turtle.Turtle()\nt.color('green')\nt.shape('turtle')\n\nt.forward(100)\nt.left(45)\nt.forward(100)`,
+    thumbnail: 3,
+  },
+  "Challenge 1": {
+    language: PYTHON,
+    code: `import turtle\nt = turtle.Turtle()\n\nt.color('teal')\nt.shape('turtle')\nt.speed(30)\n\nfor i in range(50):\n\tt.forward((100))\n\tt.left(130)`,
+    thumbnail: 4,
+  },
+  "Challenge 2": {
+    language: PYTHON,
+    code: `import turtle\nt = turtle.Turtle()\n\nfor i in range(50):\n\tt.forward(i*10)\n\tt.left(130)`,
+    thumbnail: 5,
+  },
+  "Challenge 3": {
+    language: PYTHON,
+    code: `import turtle\nt = turtle.Turtle()\n\nt.color('teal')\nt.shape('turtle')\nt.speed(30)\n\nfor i in range(5):\n\tnfor j in range(30):\n\t\tt.forward((i*j)^2)\n\t\tt.left(60)`,
+    thumbnail: 6,
+  },
 };
 
 const createDefaultProgramDoc = (lang, index) => {
@@ -122,4 +162,7 @@ module.exports = {
 
   //fronted-dependencies
   NUM_PROGRAM_THUMBNAIL_OPTIONS,
+
+  //DAY OF CODE HACK
+  dayOfCodePrograms,
 };
