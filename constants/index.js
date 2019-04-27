@@ -75,7 +75,7 @@ const languageToDefaultCode = lang => {
 const dayOfCodePrograms = {
   "Day Of Code": {
     language: PYTHON,
-    code: `print("How old are you (or how old will you be turning this year)?")\nage=20\t#change to your age\nbirth_date = 2019 - int(age)\nyear = int(birth_date) + 100\n`,
+    code: `print("How old are you (or how old will you be turning this year)?")\nage = 20\t#change to your age\nbirth_date = 2019 - int(age)\nyear = int(birth_date) + 100\n`,
     thumbnail: 0,
   },
   "Ex 3": {
@@ -105,7 +105,7 @@ const dayOfCodePrograms = {
   },
   "Challenge 3": {
     language: PYTHON,
-    code: `import turtle\nt = turtle.Turtle()\n\nt.color('teal')\nt.shape('turtle')\nt.speed(30)\n\nfor i in range(5):\n\tnfor j in range(30):\n\t\tt.forward((i*j)^2)\n\t\tt.left(60)`,
+    code: `import turtle\nt = turtle.Turtle()\n\nt.color('teal')\nt.shape('turtle')\nt.speed(30)\n\nfor i in range(5):\n\tfor j in range(30):\n\t\tt.forward((i*j)^2)\n\t\tt.left(60)`,
     thumbnail: 6,
   },
 };
