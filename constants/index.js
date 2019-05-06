@@ -5,7 +5,7 @@ const NUM_PROGRAM_THUMBNAIL_OPTIONS = 58;
 //default structure of user data (the data underneath the user document in firestore)
 const DEFAULT_USER_DATA = {
   displayName: "Joe Bruin",
-  mostRecentProgram: "Python",
+  // mostRecentProgram: some id,
   photoName: "",
   programs: [],
   classes: [],
@@ -16,7 +16,7 @@ LANGUAGES.forEach((lang, index) => {
   DEFAULT_USER_PROGRAMS.push({
     code: languageToDefaultCode(lang),
     language: lang,
-    thumbnail: Math.max(index, NUM_PROGRAM_THUMBNAIL_OPTIONS),
+    thumbnail: Math.min(index, NUM_PROGRAM_THUMBNAIL_OPTIONS),
     name: languageToDisplayName(lang),
     dateCreated: new Date(Date.now()).toUTCString(),
   });

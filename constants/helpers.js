@@ -5,7 +5,8 @@ const CPP = "c++";
 const PROCESSING = "processing";
 const HTML = "html";
 
-const LANGUAGES = [PYTHON, JAVASCRIPT, JAVA, CPP, PROCESSING, HTML];
+// const LANGUAGES = [PYTHON, JAVASCRIPT, JAVA, CPP, PROCESSING, HTML];
+const LANGUAGES = [PYTHON, PROCESSING, HTML];
 
 //converts default languages to the default code provided with them
 const languageToDefaultCode = lang => {
