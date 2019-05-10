@@ -50,6 +50,14 @@ app.post("/createProgram", upload.array(), async function(req, res) {
   });
 });
 
+app.get("/getProgram/:ownerid/:sketchid", async function(req, res) {
+  let result = await lib.getProgram(req.params.uid, req.params.sketchid, req.body);
+
+  return res.status(200).send({
+    ...result,
+  });
+});
+
 // Start the server
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
