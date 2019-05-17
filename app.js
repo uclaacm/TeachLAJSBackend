@@ -50,12 +50,20 @@ app.post("/createProgram", upload.array(), async function(req, res) {
   });
 });
 
-app.get("/getProgram/:ownerid/:sketchid", async function(req, res) {
-  let result = await lib.getProgram(req.params.uid, req.params.sketchid, req.body);
+app.post("/deleteProgram", upload.array(), async function(req, res) {
+  let result = await lib.deleteProgram(req.body || {});
 
   return res.status(200).send({
     ...result,
   });
+});
+
+app.get("/getProgram/:sketchid", async function(req, res) {
+  let result = await lib.getProgram(req.params.sketchid);
+
+  return res.status(200).send({
+    ...result,
+  })
 });
 
 // Start the server
