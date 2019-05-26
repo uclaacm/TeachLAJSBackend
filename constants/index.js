@@ -22,6 +22,8 @@ LANGUAGES.forEach((lang, index) => {
   });
 });
 
+const NUM_PROGRAM_THUMBNAIL_OPTIONS = 58;
+
 module.exports = {
   //defaults
   DEFAULT_USER_DATA,
