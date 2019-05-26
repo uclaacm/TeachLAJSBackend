@@ -26,6 +26,8 @@ $ npm install
 $ npm start
 ```
 
+Contact @malsf21 for the correct /firebase-config.js required to connect to the Firebase project
+
 The front-end client should now be automatically opened in your browser; however, you can also manually visit it on `localhost:8080`. The backend is open on `localhost:8081`.
 
 ## Developer Notes
