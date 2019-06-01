@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=prod nodemon app.js",
+    "start": "cross-env NODE_ENV=debug nodemon app.js",
     "dev": "cross-env NODE_ENV=dev nodemon app.js",
     "debug": "cross-env NODE_ENV=debug nodemon app.js",
     "prod": "cross-env NODE_ENV=prod FS_DB=prod nodemon app.js"
