@@ -11,7 +11,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
-    "cross-env": "^5.2.1",
+    "cross-env": "^6.0.3",
     "express": "^4.17.1",
     "firebase": "^5.4.2",
     "firebase-admin": "^5.12.1",
