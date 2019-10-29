@@ -58,8 +58,8 @@ app.post("/deleteProgram", upload.array(), async function(req, res) {
   });
 });
 
-app.post("/getProgram", upload.array(), async function(req, res) {
-  let result = await lib.getProgram(req.body || {});
+app.get("/getProgram/:docid", upload.array(), async function(req, res) {
+  let result = await lib.getProgram(req.params.docid);
 
   return res.status(200).send({
     ...result,
