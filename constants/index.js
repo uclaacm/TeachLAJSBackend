@@ -4,7 +4,7 @@ const NUM_PROGRAM_THUMBNAIL_OPTIONS = 58;
 
 //default structure of user data (the data underneath the user document in firestore)
 const DEFAULT_USER_DATA = {
-  displayName: "Joe Bruin",
+  displayName: "J Bruin",
   // mostRecentProgram: some id,
   photoName: "",
   programs: [],
