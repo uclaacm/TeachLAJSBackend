@@ -58,6 +58,14 @@ app.post("/deleteProgram", upload.array(), async function(req, res) {
   });
 });
 
+app.get("/getProgram/:docid", upload.array(), async function(req, res) {
+  let result = await lib.getProgram(req.params.docid);
+
+  return res.status(200).send({
+    ...result,
+  });
+});
+
 // Start the server
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
