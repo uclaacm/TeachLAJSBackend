@@ -44,7 +44,30 @@ app.put("/updatePrograms/:uid", upload.array(), async function(req, res) {
 
 app.post("/fork/:uid", upload.array(), async function(req, res) {
   let result = await lib.fork(req.params.uid, req.body);
+    return res.status(200).send({
+    ...result,
+  });
+});
 
+app.post("/createProgram", upload.array(), async function(req, res) {
+  let result = await lib.createProgram(req.body || {});
+
+  return res.status(200).send({
+    ...result,
+  });
+});
+
+app.post("/deleteProgram", upload.array(), async function(req, res) {
+  let result = await lib.deleteProgram(req.body || {});
+
+  return res.status(200).send({
+    ...result,
+  });
+});
+
+app.get("/getProgram/:docid", upload.array(), async function(req, res) {
+  let result = await lib.getProgram(req.params.docid);
+  
   return res.status(200).send({
     ...result,
   });
