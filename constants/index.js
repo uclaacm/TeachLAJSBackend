@@ -11,6 +11,11 @@ const DEFAULT_USER_DATA = {
   classes: [],
 };
 
+const RANDOM_WORDS = {
+  adjectives: ["Big", "Chunky", "Tiny", "Screaming"],
+  nouns: ["Monkey", "Bison", "Hotdog"],
+};
+
 let DEFAULT_USER_PROGRAMS = [];
 LANGUAGES.forEach((lang, index) => {
   DEFAULT_USER_PROGRAMS.push({
@@ -26,6 +31,7 @@ module.exports = {
   //defaults
   DEFAULT_USER_DATA,
   DEFAULT_USER_PROGRAMS,
+  RANDOM_WORDS,
 
   //frontend-dependencies
   NUM_PROGRAM_THUMBNAIL_OPTIONS,
