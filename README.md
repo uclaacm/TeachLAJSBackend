@@ -1,4 +1,4 @@
-## ACM Teach LA Backend
+# ACM Teach LA Backend
 
 This is the (JS) middleware/backend code for the ACM Teach LA [editor](https://editor.uclaacm.com). It's built by the UCLA ACM Teach LA dev team with [Express](https://expressjs.com/) and [Firebase](https://firebase.google.com/).
 
@@ -6,11 +6,11 @@ This is the (JS) middleware/backend code for the ACM Teach LA [editor](https://e
 
 You'll need:
 
-- [Node](https://nodejs.org/en/) (we develop this with Node v10)
+- [Node](https://nodejs.org/en/) (we develop this with Node v12.14.1 LTS)
 - [git](https://git-scm.com/)
 - either npm (which comes default with Node) or [yarn](https://yarnpkg.com/en/)
 
-Once you have those dependencies, set up is very simple. 
+Once you have those dependencies, set up is very simple.
 
 Type the following lines into your command line:
 
