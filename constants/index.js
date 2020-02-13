@@ -12,7 +12,7 @@ const DEFAULT_USER_DATA = {
 };
 
 const RANDOM_WORDS = {
-  adjectives: ["Big", "Chunky", "Tiny", "Screaming"],
+  adjectives: ["Big", "Chunky", "Tiny", "Screaming", "Green", "Loud", "Extreme", "Funny", "Cool", "Interesting", "Silly"],
   nouns: ["Monkey", "Bison", "Hotdog"],
 };
 
