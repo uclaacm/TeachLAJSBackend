@@ -1,5 +1,7 @@
 # ACM Teach LA Backend
 
+⚠ This project has been succeeded by [teach-la-go-backend](https://github.com/uclaacm/teach-la-go-backend) ⚠
+
 This is the (JS) middleware/backend code for the ACM Teach LA [editor](https://editor.uclaacm.com). It's built by the UCLA ACM Teach LA dev team with [Express](https://expressjs.com/) and [Firebase](https://firebase.google.com/).
 
 ## Developer Setup
